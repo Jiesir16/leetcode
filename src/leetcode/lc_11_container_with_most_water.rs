@@ -1,3 +1,13 @@
+///
+/// ***11. 盛最多水的容器***
+/// * 输入：[1,8,6,2,5,4,8,3,7]
+/// * 输出：49
+/// ```rust
+/// let args = vec![1,8,6,2,5,4,8,3,7];
+/// let max_area = leetcode::lc_11_container_with_most_water::max_area(args);
+/// println!("---------max_area:{max_area}")
+/// ```
+///
 pub fn max_area(height: Vec<i32>) -> i32 {
     let mut x = 1;
     let mut y = height.len();
