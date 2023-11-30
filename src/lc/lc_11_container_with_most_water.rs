@@ -4,10 +4,11 @@
 /// * 输出：49
 /// ```rust
 /// let args = vec![1,8,6,2,5,4,8,3,7];
-/// let max_area = leetcode::lc_11_container_with_most_water::max_area(args);
+/// let max_area = lc::lc_11_container_with_most_water::max_area(args);
 /// println!("---------max_area:{max_area}")
 /// ```
 ///
+
 pub fn max_area(height: Vec<i32>) -> i32 {
     let mut x = 1;
     let mut y = height.len();
@@ -16,7 +17,7 @@ pub fn max_area(height: Vec<i32>) -> i32 {
         let width = (y - x) as i32;
         let tmp_max_area = min(height[x - 1], height[y - 1]) * width;
         if tmp_max_area > max_area { max_area = tmp_max_area }
-        if height[x-1] < height[y-1] { x += 1 } else { y -= 1 }
+        if height[x - 1] < height[y - 1] { x += 1 } else { y -= 1 }
     }
     max_area
 }
