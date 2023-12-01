@@ -6,7 +6,7 @@
 /// * 输出: [1,3,12,0,0]
 /// ```rust
 ///    let mut vect = vec![0, 1, 0, 3, 12];
-///    lc::lc_283_move_zeros::move_zeroes(&mut vect);
+///    solutions::lc_283_move_zeros::move_zeroes(&mut vect);
 ///    println!("{:?}", vect);
 /// ```
 ///

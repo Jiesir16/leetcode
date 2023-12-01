@@ -1,4 +1,4 @@
-use leetcode::lc::{*};
+use leetcode::solutions::{*};
 
 fn main() {
     let mut vect = vec![0, 1, 0, 3, 12];

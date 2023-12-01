@@ -10,7 +10,7 @@
 /// > > 注意，输出的顺序和三元组的顺序并不重要
 /// ```rust
 /// let args = vec![-1,0,1,2,-1,-4];
-/// let result = lc::lc_15_3sum::three_sum(args);
+/// let result = solutions::lc_15_3sum::three_sum(args);
 /// println!("---result:{:?}",result)
 /// ```
 pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
