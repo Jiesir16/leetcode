@@ -5,6 +5,7 @@
 /// * 输入: nums = [0,1,0,3,12]
 /// * 输出: [1,3,12,0,0]
 /// ```rust
+///    use leetcode::solutions;
 ///    let mut vect = vec![0, 1, 0, 3, 12];
 ///    solutions::lc_283_move_zeros::move_zeroes(&mut vect);
 ///    println!("{:?}", vect);

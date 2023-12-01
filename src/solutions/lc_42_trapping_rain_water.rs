@@ -1,5 +1,5 @@
 ///
-/// * 42.接雨水
+/// * ***42.接雨水***
 ///
 /// https://leetcode.cn/problems/trapping-rain-water/description/?envType=study-plan-v2&envId=top-100-liked
 /// > 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
@@ -8,6 +8,12 @@
 /// > ```输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]```
 /// >
 /// > 输出：6
+/// ```rust
+/// use leetcode::solutions;
+/// let args = vec![0,1,0,2,1,0,1,3,2,1,2,1];
+/// let result = solutions::lc_42_trapping_rain_water::trap(args);
+/// println!("---result:{result}");
+/// ```
 ///
 pub fn trap(height: Vec<i32>) -> i32 {
     let mut pre_max = 0;

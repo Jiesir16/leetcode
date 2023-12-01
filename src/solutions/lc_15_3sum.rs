@@ -9,6 +9,7 @@
 /// > >
 /// > > 注意，输出的顺序和三元组的顺序并不重要
 /// ```rust
+/// use leetcode::solutions;
 /// let args = vec![-1,0,1,2,-1,-4];
 /// let result = solutions::lc_15_3sum::three_sum(args);
 /// println!("---result:{:?}",result)
