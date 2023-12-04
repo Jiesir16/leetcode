@@ -13,7 +13,11 @@ fn main() {
     let result = solutions::lc_15_3sum::three_sum(args);
     println!("---result:{:?}", result);
 
-    let args = vec![0,1,0,2,1,0,1,3,2,1,2,1];
+    let args = vec![0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
     let result = solutions::lc_42_trapping_rain_water::trap(args);
     println!("---result:{result}");
+
+    let args: Vec<String> = vec!["eat", "tea", "tan", "ate", "nat", "bat"].into_iter().map(|s| s.to_string()).collect();
+    let result = solutions::lc_49_group_anagrams::group_anagrams(args);
+    println!("-----result:{:?}", result)
 }
