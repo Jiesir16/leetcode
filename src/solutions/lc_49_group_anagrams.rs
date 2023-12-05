@@ -41,7 +41,8 @@ pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
 }
 
 ///
-/// 获取hash表的key，26位字母出现频率的slices
+/// 获取hash表的key，26位字母出现频率的slices,用位图不行，出现重复单词就不行了
+///
 fn get_key(str_vec: Vec<char>) -> [u8; 26] {
     let mut key = [0u8; 26];
     for c in str_vec {
