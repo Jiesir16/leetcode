@@ -1,25 +1,52 @@
 use std::collections::HashMap;
 
+///
+/// * ***示例 1:***
+///
+/// > * 输入: ```strs = ["eat", "tea", "tan", "ate", "nat", "bat"]```
+/// > * 输出: ```[["bat"],["nat","tan"],["ate","eat","tea"]]```
+/// ```rust
+/// use leetcode::solutions;
+/// let args: Vec<String> = vec!["eat", "tea", "tan", "ate", "nat", "bat"].into_iter().map(|s| s.to_string()).collect();
+/// let result = solutions::lc_49_group_anagrams::group_anagrams(args);
+/// println!("-----result:{:?}", result)
+/// ```
+///
 pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
-    // 定义判断重复
-    let mut same_str_map: HashMap<String, Vec<String>> = HashMap::new();
+    // 单词hashmap
+    let mut same_str_map: HashMap<[u8; 26], Vec<String>> = HashMap::new();
 
+    // 遍历字符串
     for str in strs {
-        let mut str_vec: Vec<char> = str.chars().collect();
-        str_vec.sort_by(|a, b| a.cmp(b));
-        let key = str_vec.into_iter().collect::<String>();
+        // 获取单词的char slice数组
+        let str_vec: Vec<char> = str.chars().collect();
+        // 获取单词特征
+        let key = get_key(str_vec);
+        // 匹配是否在单词hashmap匹配到单词特征
         match same_str_map.get(&key) {
             Some(value) => {
-                let mut new_value = value.clone();
-                new_value.push(str);
-                same_str_map.insert(key, new_value);
+                // 如果单词特征在hash表中,说明是字母异位词
+                let mut value1 = value.clone();
+                value1.push(str);
+                same_str_map.insert(key, value1);
             }
             _ => {
+                // 没有获取到的匹配情况,将新词放到hash表中
                 let value = vec![str];
                 same_str_map.insert(key, value);
             }
         }
     }
-
     same_str_map.into_iter().map(|(_, value)| value).collect()
+}
+
+///
+/// 获取hash表的key，26位字母出现频率的slices
+fn get_key(str_vec: Vec<char>) -> [u8; 26] {
+    let mut key = [0u8; 26];
+    for c in str_vec {
+        let idx: u8 = c as u8 - 'a' as u8;
+        key[idx as usize] += 1
+    }
+    key
 }
