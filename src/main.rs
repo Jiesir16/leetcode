@@ -1,7 +1,7 @@
 use leetcode::solutions;
 
 fn main() {
-    let args = vec![0,3,7,2,5,8,4,6,0,1];
-    let result = solutions::lc_128_longest_consecutive_sequence::longest_consecutive(args);
-    println!("最长连续序列长度是{result}");
+    let args = String::from("pwwwkew");
+    let result = solutions::lc_3_longest_substring_without_repeating_characters::length_of_longest_substring(args);
+    println!("无重复字符的最长子串长度是{result}");
 }
