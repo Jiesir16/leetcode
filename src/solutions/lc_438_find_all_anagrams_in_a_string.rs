@@ -1,3 +1,6 @@
+///
+/// ../static/leetcode#438.png
+///
 pub fn find_anagrams(s: String, p: String) -> Vec<i32> {
     // 结果vec
     let mut result = vec![];
