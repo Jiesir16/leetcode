@@ -7,4 +7,5 @@ pub mod solutions {
     pub mod lc_128_longest_consecutive_sequence;
     pub mod lc_3_longest_substring_without_repeating_characters;
     pub mod lc_438_find_all_anagrams_in_a_string;
+    pub mod lc_560_subarray_sum_equals_k;
 }
