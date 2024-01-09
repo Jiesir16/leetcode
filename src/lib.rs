@@ -9,4 +9,5 @@ pub mod solutions {
     pub mod lc_438_find_all_anagrams_in_a_string;
     pub mod lc_560_subarray_sum_equals_k;
     pub mod lc_239_sliding_window_maximum;
+    pub mod lc_76_minimum_window_substring;
 }

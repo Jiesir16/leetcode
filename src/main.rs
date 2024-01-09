@@ -3,7 +3,7 @@ use leetcode::solutions;
 
 fn main() {
     let start = Instant::now();
-    let result = solutions::lc_239_sliding_window_maximum::max_sliding_window(vec![1,1,1],2);
+    let result = solutions::lc_76_minimum_window_substring::min_window(String::from("abc"),String::from("cba"));
     println!("用时{:?}",start.elapsed());
-    println!("滑动窗口中的最大值数组:{:?}",result);
+    println!("最小覆盖字串:{:?}",result);
 }
