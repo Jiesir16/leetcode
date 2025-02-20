@@ -22,7 +22,7 @@ pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
         let str_vec: Vec<char> = str.chars().collect();
         // 获取单词特征
         let key = get_key(str_vec);
-        // 匹配是否在单词hashmap匹配到单词特征
+        // 匹配是否在单词hashmap匹配到单词特征（模式匹配）
         match same_str_map.get(&key) {
             Some(value) => {
                 // 如果单词特征在hash表中,说明是字母异位词
